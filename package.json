@@ -8,9 +8,6 @@
     "build": "webpack --mode production",
     "lint": "eslint .",
     "test": "jest",
-
-
-
     "coverage": "jest --coverage",
     "preshow:coverage": "npm run coverage",
     "show:coverage": "live-server coverage/lcov-report",
@@ -31,6 +28,7 @@
     "eslint-plugin-import": "^2.20.2",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.0.4",
+    "husky": "^4.3.8",
     "jest": "^25.2.7",
     "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^0.9.0",
@@ -40,5 +38,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test"
+    }
   }
 }
