@@ -20,5 +20,6 @@ export default function calculateCashback(amount) {
 
   if (!discountType) return 0;
 
+  // eslint-disable-next-line no-mixed-operators
   return cashback[discountType].percent * amount / 100;
 }
