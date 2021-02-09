@@ -22,19 +22,3 @@ export default function calculateCashback(amount) {
 
   return cashback[discountType].percent * amount / 100;
 }
-
-// export default function calculateCashback(amount) {
-//   if (amount >= cashback.gold.bound) {
-//     return Math.ceil(amount * cashback.gold.percent / 100);
-//   }
-
-//   if (amount >= cashback.silver.bound) {
-//     return Math.ceil(amount * cashback.silver.percent / 100);
-//   }
-
-//   if (amount >= cashback.regular.bound) {
-//     return Math.ceil(amount * cashback.regular.percent / 100);
-//   }
-
-//   return 0;
-// }
